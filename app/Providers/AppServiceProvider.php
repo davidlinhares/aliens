@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Providers;
+namespace Aliens\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +14,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //FIX FOR ERROR ON STRING LENGTH ON DATABASE MARIA DB -V 10.1.10
+        Schema::defaultStringLength(191);
     }
 
     /**

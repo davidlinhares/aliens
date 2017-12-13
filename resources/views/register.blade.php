@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Welcome</title>
+        <title>Register</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -66,26 +66,23 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
             <div class="content">
-                <div class="title m-b-md">
-                    Aliens Project
-                </div>
-
-                <div class="links">
-                    <a href="{{ route('login') }}" class="btn btn-primary">Login</a>
-                    <a href="{{ route('register') }}" class="btn btn-success">Register</a>
-                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Senha</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite sua senha" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <a href="{{ route('welcome') }}" class="btn btn-danger">Cancelar</a>
+                </form>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
