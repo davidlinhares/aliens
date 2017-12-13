@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.outer')
 
 @section('content')
 <div class="container">
@@ -57,7 +57,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     Registrar
                                 </button>
-                                <a href="{{ route('welcome') }}" class="btn btn-danger">
+                                <a href="{{ route('posts') }}" class="btn btn-danger">
                                     Cancelar
                                 </a>
                             </div>

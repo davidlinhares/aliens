@@ -123,19 +123,7 @@
                 </div>
             </div>
         </nav>
-        @guest
-            <div class="content">
-                <div class="title m-b-md">
-                    Aliens Project
-                </div>
-                <div class="links">
-                    <a href="{{ route('login') }}" class="btn btn-primary">Login</a>
-                    <a href="{{ route('register') }}" class="btn btn-success">Register</a>
-                </div>
-            </div>
-        @else
-            @yield('content')
-        @endif
+        @yield('content')
     </div>
 
     <!-- Scripts -->
